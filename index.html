@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -9,35 +7,45 @@
     <meta name="apple-mobile-web-app-title" content="Phantom" />
     <meta name="application-name" content="Phantom" />
     <meta name="theme-color" content="#9C90DD" />
+
     <title>Phantom</title>
-    <link rel="icon" type="image/svg+xml" href="https://docs.phantom.com/favicon.svg" />
-    <link rel="apple-touch-icon" href="favicon.jpg" />
+
+    <!-- Icona per browser e Home Screen iPhone -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="favicon.png" />
+
+    <!-- Font e librerie esterne -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+
+    <!-- React e Babel (per il tuo codice) -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html,body,#root{height:100%}
-    :root{
-    --bg:#111111;--card:#232323;--card-hover:#2a2a2a;--purple:#7c3aed;--purple-soft:#a78bfa;
-    --green:#00A668;--red:#ef4444;--text:#fff;--text-secondary:#8b8b8b;--text-tertiary:#666;
-    --border:#2a2a2a;--popover:#1a1a1a;--secondary:#262626;
-    }
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overscroll-behavior-y:contain;overflow:hidden;-webkit-user-select:none;user-select:none}
-    ::-webkit-scrollbar{width:0;height:0}
-    input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
-    input[type=number]{appearance:textfield;-moz-appearance:textfield}
-    input,textarea,select{-webkit-user-select:text;user-select:text}
-    @keyframes rotation{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-    .loader{width:48px;height:48px;border:5px solid #FFF;border-bottom-color:transparent;border-radius:50%;display:inline-block;box-sizing:border-box;animation:rotation 1s linear infinite}
-    button{-webkit-tap-highlight-color:transparent}
-    .tap-feedback{transition:transform .18s cubic-bezier(.2,.8,.2,1),opacity .18s ease,filter .18s ease;transform:translateZ(0)}
-    .tap-feedback:active{transform:scale(.985)}
-    .tap-feedback-soft:active{transform:scale(.992)}
+        /* ==================== IL TUO CSS ==================== */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html,body,#root{height:100%}
+        :root{
+        --bg:#111111;--card:#232323;--card-hover:#2a2a2a;--purple:#7c3aed;--purple-soft:#a78bfa;
+        --green:#00A668;--red:#ef4444;--text:#fff;--text-secondary:#8b8b8b;--text-tertiary:#666;
+        --border:#2a2a2a;--popover:#1a1a1a;--secondary:#262626;
+        }
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overscroll-behavior-y:contain;overflow:hidden;-webkit-user-select:none;user-select:none}
+        ::-webkit-scrollbar{width:0;height:0}
+        input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+        input[type=number]{appearance:textfield;-moz-appearance:textfield}
+        input,textarea,select{-webkit-user-select:text;user-select:text}
+        @keyframes rotation{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        .loader{width:48px;height:48px;border:5px solid #FFF;border-bottom-color:transparent;border-radius:50%;display:inline-block;box-sizing:border-box;animation:rotation 1s linear infinite}
+        button{-webkit-tap-highlight-color:transparent}
+        .tap-feedback{transition:transform .18s cubic-bezier(.2,.8,.2,1),opacity .18s ease,filter .18s ease;transform:translateZ(0)}
+        .tap-feedback:active{transform:scale(.985)}
+        .tap-feedback-soft:active{transform:scale(.992)}
     </style>
-    </head>
+</head>
     <body>
     <div id="root"></div>
     <script type="text/babel">
